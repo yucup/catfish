@@ -53,10 +53,12 @@ if (isset($_POST['edit']))
 	$id_produk = $_POST['id_produk'];
 	$jumlah_penjualan = $_POST['jumlah_penjualan'];
 	$harga_penjualan = $_POST['harga_penjualan'];
+	$harga_total_penjualan = $jumlah_penjualan * $harga_penjualan;
 
 	$connection->query("UPDATE penjualan SET id_produk = '$id_produk',
 		jumlah_penjualan = '$jumlah_penjualan',
-		harga_penjualan = '$harga_penjualan' WHERE id_penjualan = '$id_penjualan'");
+		harga_penjualan = '$harga_penjualan',
+		harga_total_penjualan = '$harga_total_penjualan' WHERE id_penjualan = '$id_penjualan'");
 
 
 	echo "<script>location='index.php?page=penjualan'</script>";
