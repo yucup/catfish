@@ -8,6 +8,7 @@ while ($takes = $ambil->fetch_assoc())
 	 $perlengkapan[] = $takes;
 }
 
+
 // echo "<pre>";
 // print_r($perlengkapan);
 // echo "</pre>";
@@ -48,10 +49,20 @@ while ($takes = $ambil->fetch_assoc())
 				</tbody>
 				<tfoot>
 					<th></td>
-					<th>Total</th>
 					<th></th>
 					<th></th>
-					<th><?php echo "Rp. " . number_format($hasil); ?></th>
+					<th class="text-center">Total</th>
+					<th>
+						<?php if (empty($hasil)){
+							echo "0";
+						 ?>
+							
+						<?php } else {
+
+							?>
+						<?php echo "Rp. " . number_format($hasil); ?>
+							<?php } ?>
+						</th>
 				</tfoot>
 			</table>
 		</div>

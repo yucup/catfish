@@ -35,7 +35,7 @@ while ($ambil = $takes->fetch_assoc())
 				</select>
 			</div>
 		<div class="mb-3">
-			<label class="form-label">Jumlah</label>
+			<label class="form-label">Kg</label>
 			<input type="number" name="jumlah_penjualan" value="<?php echo $penjualan['jumlah_penjualan'];?>" class="form-control">
 		</div>
 		<div class="mb-3">
