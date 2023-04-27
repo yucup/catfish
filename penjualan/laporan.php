@@ -32,8 +32,10 @@ while($detail = $ambil->fetch_assoc())
 			</tr>
 		</thead>
 		<tbody>
+			<?php $total = 0 ?>
 			<?php foreach ($laporan as $key => $value): ?>
-			<tr>
+				<?php $total_harga = $total += $value['harga_total_penjualan'] ?>
+			<tr style="text-align: center;">
 				<td><?php echo $key+1; ?></td>
 				<td><?php echo $value["nama_produk"]; ?></td>
 				<td><?php echo $value['jumlah_penjualan']; ?></td>
@@ -43,6 +45,14 @@ while($detail = $ambil->fetch_assoc())
 
 			</tr>
 			<?php endforeach ?>
+			<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<th>Total</th>
+			<th><?php echo "Rp. " . number_format($total_harga); ?></th>
+			<td></td>
+			</tr>
 		</tbody>
 	</table>
 	<script>
