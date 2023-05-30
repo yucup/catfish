@@ -25,7 +25,7 @@ $detail_kilo = $takes->fetch_assoc();
 
 // berapa karung
 $ambil = $detail_kilo['kilo'];
-$hasil_seluruh_kilo = $ambil / 30;
+$hasil_seluruh_kilo = $ambil / 30; //hari
 
 // perlengkapan
 $perlengkapan = array();
